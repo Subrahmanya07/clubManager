@@ -5,10 +5,12 @@ function isValid() {
     var inUser = document.getElementById("usr").value;
     var inPass = document.getElementById("pass").value;
 
+// check this snippet
     fetch("C:/Users/hegde/OneDrive/Desktop/dbms/FrontEnd/php/login.php", { method: "POST", body: inPass,inPass })
   .then(res => res.text())
   .then(txt => console.log(txt))
   .catch(err => console.error(err));
+// end 
 
     if (defUser == inUser && defPass == inPass) {
       window.open(
