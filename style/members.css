@@ -1,0 +1,23 @@
+body {
+    font-size: medium;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
+  h {
+    font-size: larger;
+    font-weight: bold;
+  }
+  ul {
+    text-align: left;
+    list-style: circle;
+  }
+  ol {
+    text-align: left;
+    list-style: decimal-leading-zero;
+  }
+  #list {
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

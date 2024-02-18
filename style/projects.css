@@ -1,0 +1,16 @@
+body {
+    font-size: medium;
+    font-family: "Courier New", Courier, monospace;
+    height: 100%;
+    text-align: center;
+  }
+  h {
+    font-size: larger;
+    font-weight: bold;
+  }
+  #list {
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

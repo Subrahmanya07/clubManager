@@ -1,0 +1,9 @@
+body {
+    font-size: medium;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
+  h {
+    font-size: larger;
+    font-weight: bold;
+  }
