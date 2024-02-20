@@ -2,25 +2,32 @@
   <head>
     <meta author="rnks" />
     <meta name="loginPage" />
-    <script src="C:\Users\hegde\OneDrive\Desktop\dbms\FrontEnd\script\login.js"></script>
+    <script src="../script/login.js"></script>
     <link
-      rel="styleSheet"
-      href="C:\Users\hegde\OneDrive\Desktop\dbms\FrontEnd\style\login.css"
+      rel="styleSheet" 
+      href="../style/login.css"
     />
   </head>
   <body>
     <div id="form">
+      <form method="post" action="../php/login.php">
       <br />
       <label for="usr">Username : </label>
-      <input class="read" type="text" id="usr" /><br /><br />
+      <input class="read" type="text" id="usr" onclick="clearErr()"  name="username"/><br /><br />
       <label for="pass">Password : </label>
-      <input class="read" type="password" id="pass" /><br /><button
+      <input class="read" type="password" id="pass" name="password" /><br /><button
         id="forgot"
         type="button"
         onclick="alert('Contact Developers')"
       >
         Forgot Password ?</button
-      ><br /><br />
+        ><br />
+        <span id="errMsg">
+        <?php
+        echo isset($login_err)?$login_err:'';
+        ?>
+        </span>
+        <br />
       <input id="reset" type="reset" value="Reset" onclick="reset()" />
       <input
         id="submit"
@@ -28,6 +35,7 @@
         value="Submit"
         onclick="isValid()"
       /><br /><br />
+</form>
     </div>
   </body>
 </html>
