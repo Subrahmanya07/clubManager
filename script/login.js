@@ -7,7 +7,7 @@ function isValid() {
 
     if (defUser == inUser && defPass == inPass) {
       window.open(
-        "C:/Users/hegde/OneDrive/Desktop/dbms/FrontEnd/html/home.html",
+        "../html/home.html",
         "_self"
       );
     } else {
