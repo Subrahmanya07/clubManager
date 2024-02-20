@@ -9,14 +9,16 @@
     <div id="headerText">
       <h1>Attendance</h1>
     </div>
+
     <div id="btnHolder">
-      <button id="btnMarkAttendance" onclick="markAttendance()">Mark</button>
+      <form method="POST" action="../php/markAttendance.php">
+      <button type="submit" id="btnMarkAttendance" onclick="markAttendance()">Mark</button>
+    </form>
     </div>
     <br />
-    <table>
-      <tr>
-        <th></th>
-      </tr>
-    </table>
+    <iframe src="../php/showAttendance.php">
+
+    </iframe>
+   
   </body>
 </html>

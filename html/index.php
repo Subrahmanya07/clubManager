@@ -8,7 +8,7 @@
       href="../style/login.css"
     />
   </head>
-  <body>
+    <body>
     <div id="form">
       <form method="post" action="../php/login.php">
       <br />
