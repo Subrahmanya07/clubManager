@@ -1,7 +1,7 @@
 <?php
 if(!isset($_SESSION)){session_start();}
 date_default_timezone_set('Asia/Calcutta');
-require 'config.php';
+require 'config2.php';
 $username=$_SESSION['username'];
 $date=Date('Y-m-d');
 $time=Date('H:i:s');

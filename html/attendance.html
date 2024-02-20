@@ -1,22 +1,20 @@
 <html>
   <head>
-    <link
-      rel="styleSheet"
-      href="../style/attendance.css"
-    />
+    <link rel="styleSheet" href="../style/attendance.css" />
   </head>
   <body>
     <div id="headerText">
       <h1>Attendance</h1>
     </div>
-
     <div id="btnHolder">
       <form method="POST" action="../php/markAttendance.php">
-      <button type="submit" id="btnMarkAttendance" onclick="markAttendance()">Mark</button>
-    </form>
+        <button type="submit" id="btnMarkAttendance" onclick="markAttendance()">
+          Mark
+        </button>
+      </form>
     </div>
     <br />
-    <iframe id="aContainer" src="../php/showAttendance.php">
+    <iframe id="aContainer" src="../php/showAttendance.php" style="height: 80%">
     </iframe>
   </body>
 </html>

@@ -1,6 +1,8 @@
 <?php
+$row = "aRow";
+
 if(!isset($_SESSION)){session_start();}
-require 'config.php'; 
+require 'config2.php'; 
 $username=$_SESSION['username'];
 
 $sql = "select aDate,aTime from `attendance` where usn=?";
@@ -17,7 +19,7 @@ if ($stmt = $conn->prepare($sql)) {
             echo '<link rel="stylesheet" href="../style/attendance.css">';
             echo '<div id="aBody">';
             while ($stmt->fetch()) {
-                echo "<div id='aRow'><h>$date</h> : $time</div>";
+                echo "<div id=$row><form method='POST' action='deMarkAttendance.php' ><h>$date</h> : $time : <button type='submit'>-</button></form></div>";
             }
             echo '<div>';
         }

@@ -30,6 +30,13 @@ body {
     align-items: center;
   }
 
+  #aContainer{
+      width: 100%;
+      height: max-content;
+      text-align: center;
+      border: none;
+  }
+
   #aBody{
     width: 100%;
     text-align: center;
