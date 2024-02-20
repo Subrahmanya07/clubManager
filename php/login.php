@@ -20,10 +20,7 @@
                   if ($stmt->fetch()) {
                
                       if ($password==$hashed_password) {
-                          // Password is correct, start a new session
-                         // session_start();
                           $_SESSION["loggedin"] = true;
-                        
                           $_SESSION["username"] = $username;
                          
                           // Redirect user to welcome page
@@ -32,13 +29,11 @@
                       } else {
                           // Password is incorrect
                           $login_err = "Invalid username or password.";
-                          //echo $login_err;
                       }
                   }
               } else {
                   // Username not found
                   $login_err = "Invalid username or password.";
-                 // echo $login_err;
               }
           } else {
               echo "Oops! Something went wrong. Please try again later.";

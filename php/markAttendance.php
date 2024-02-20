@@ -5,6 +5,7 @@ require 'config.php';
 $username=$_SESSION['username'];
 $date=Date('Y-m-d');
 $time=Date('H:i:s');
+
 $sql = "INSERT INTO `attendance`(`usn`, `aDate`, `aTime`) VALUES (?,?,?)";
       
 if ($stmt = $conn->prepare($sql)) {

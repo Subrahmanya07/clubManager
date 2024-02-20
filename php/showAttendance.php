@@ -2,6 +2,7 @@
 if(!isset($_SESSION)){session_start();}
 require 'config.php'; 
 $username=$_SESSION['username'];
+
 $sql = "select aDate,aTime from `attendance` where usn=?";
 
 if ($stmt = $conn->prepare($sql)) {
@@ -13,11 +14,13 @@ if ($stmt = $conn->prepare($sql)) {
         
         if ($stmt->num_rows >0) {
             $stmt->bind_result($date, $time);
-            echo '<table border="1" style="border-spacing:0;"><thead><tr><th>Date</th><th>Time</th></tr></thead><tbody>';
+            echo '<link rel="stylesheet" href="../style/attendance.css">';
+            echo '<div id="aBody">';
             while ($stmt->fetch()) {
-                echo "<tr><td>$date</td><td>$time</td></tr>";
+                echo "<div id='aRow'><h>$date</h> : $time</div>";
             }
-            echo '</tbody></table>';
+            echo '<div>';
         }
     }
-}
+} 
+?>

@@ -6,6 +6,7 @@ body {
     font-size: larger;
     font-weight: bold;
   }
+
   #btnMarkAttendance {
     border: 1px solid;
     border-radius: 3px;
@@ -27,4 +28,14 @@ body {
   #btnHolder{
     text-align: right;
     align-items: center;
+  }
+
+  #aBody{
+    width: 100%;
+    text-align: center;
+  }
+
+  .aRow{
+    width: 100%;
+    text-align: center;
   }

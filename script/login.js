@@ -1,17 +1,9 @@
 function isValid() {
-  var defUser='admin';
-  var defPass='admin';
-
     var inUser = document.getElementById("usr").value;
-    var inPass = document.getElementById("pass").value;
-
-    if (defUser == inUser && defPass == inPass) {
-      window.open(
-        "../html/home.html",
-        "_self"
-      );
-    } else {
-      alert("Enter valid credentials");
+    var inUser = inUser.toLowerCase();
+    let usn = /^[1-4][a-z][a-z][0-9][0-9][a-z][a-z][0-9][0-9][0-9]/;
+    if(!usn.test(inUser)){
+      alert("Enter valid username");
     }
   }
 

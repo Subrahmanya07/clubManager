@@ -3,18 +3,7 @@ body {
     font-family: "Courier New", Courier, monospace;
     text-align: center;
   }
-  table {
-    border: none;
-    text-align: center;
-  }
-  td {
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  tr {
-    height: 40px;
-  }
+
   h {
     font-size: larger;
     font-weight: lighter;
