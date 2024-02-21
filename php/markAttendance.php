@@ -11,10 +11,14 @@ $sql = "INSERT INTO `attendance`(`usn`, `aDate`, `aTime`) VALUES (?,?,?)";
 if ($stmt = $conn->prepare($sql)) {
    
     $stmt->bind_param("sss",$username,$date,$time);
-   
-    if ($stmt->execute()) {
-        
+
+    try{
+        if ($stmt->execute()) {
+        }
+    }catch(Exception $e){
+        //var_dump($e->getMessage());
     }
+   
 }
-header('location:../html/attendance.html');
+header('location:deMarkAttendance.php');
 ?>
