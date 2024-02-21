@@ -1,6 +1,4 @@
 <?php
-$row = "aRow";
-
 if(!isset($_SESSION)){session_start();}
 require 'config2.php'; 
 $username=$_SESSION['username'];
@@ -19,7 +17,7 @@ if ($stmt = $conn->prepare($sql)) {
             echo '<link rel="stylesheet" href="../style/attendance.css">';
             echo '<div id="aBody">';
             while ($stmt->fetch()) {
-                echo "<div id=$row><form method='POST' action='deMarkAttendance.php' ><h>$date</h> : $time : <button type='submit'>-</button></form></div>";
+                echo "<div id='aRow'><form method='POST' action='deMarkAttendance.php' ><h>$date</h> : $time : <button type='submit'>-</button></form></div>";
             }
             echo '<div>';
         }
