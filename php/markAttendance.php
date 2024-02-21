@@ -14,6 +14,18 @@ if ($stmt = $conn->prepare($sql)) {
 
     try{
         if ($stmt->execute()) {
+            $sql = "UPDATE `members` SET `dayCount`=`dayCount`+1  WHERE usn=?";
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("s",$username);
+                try{
+                    if($stmt->execute()){
+
+                    }
+                }catch(Exception $e){
+                    //var_dump($e->getMessage());
+                }
+            }
+
         }
     }catch(Exception $e){
         //var_dump($e->getMessage());
