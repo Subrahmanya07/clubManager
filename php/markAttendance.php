@@ -11,10 +11,26 @@ $sql = "INSERT INTO `attendance`(`usn`, `aDate`, `aTime`) VALUES (?,?,?)";
 if ($stmt = $conn->prepare($sql)) {
    
     $stmt->bind_param("sss",$username,$date,$time);
-   
-    if ($stmt->execute()) {
-        
+
+    try{
+        if ($stmt->execute()) {
+            $sql = "UPDATE `members` SET `dayCount`=`dayCount`+1  WHERE usn=?";
+            if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("s",$username);
+                try{
+                    if($stmt->execute()){
+
+                    }
+                }catch(Exception $e){
+                    //var_dump($e->getMessage());
+                }
+            }
+
+        }
+    }catch(Exception $e){
+        //var_dump($e->getMessage());
     }
+   
 }
-header('location:../html/attendance.html');
+header('location:deMarkAttendance.php');
 ?>
